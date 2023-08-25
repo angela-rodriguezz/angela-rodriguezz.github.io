@@ -183,6 +183,13 @@ input, select, textarea {
 		width: 70em;
 	}
 
+	
+	
+	
+
+  
+  
+
 		@media screen and (max-width: 1680px) {
 
 			.container {
@@ -1545,6 +1552,10 @@ input, select, textarea {
 			padding-bottom: 0.5em;
 		}
 
+		.img .fix img {
+			margin: 2em;
+		}
+
 		header.major {
 			position: relative;
 			text-align: center;
@@ -2126,7 +2137,13 @@ input, select, textarea {
 	}
 
 		#nav > ul {
-			margin: 0;
+			display: inline-block;
+		}
+
+		#nav > ul > img {
+			text-align: center;
+				margin: 0em 0 3em 0;						
+    			vertical-align: middle;
 		}
 
 			#nav > ul > li {
