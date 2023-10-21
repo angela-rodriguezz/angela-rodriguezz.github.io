@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Cave of Luck | Angela Rodriguez Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/png" sizes="500x500" href="./media/favicon.png">
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<section id="header">
+
+				<!-- Logo -->
+				<a href="./"><img class="img fix" width="110" src="./media/favicon.png"></a>
+				<h1>Angela Rodriguez</h1>
+				</br>
+					<p>- Creator in Programming and Visual Arts -</p>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="./">Home</a></li>
+							
+							<li><a href="./aboutme">About Me</a></li>
+							<li class="current"><a href="./projects">Projects</a></li>
+							<li><a href="./blog">Blog</a></li>
+							<li><a href="./Angela-Rodriguez-Resume.pdf" target="_blank">Resume</a></li>
+							
+						</ul>
+					</nav>
+			</section>
+
+			<!-- Main -->
+            <section id="banner2">	
+				<header>
+				<img height="400" src="/media/cavegame.png">	
+				</header>																																																																										
+                <!--<header>
+                <div>
+                    <img height="400" src="https://static.wixstatic.com/media/2f7e13_59acf977762e4afaa7b7109e4c79b553~mv2.jpg/v1/fill/w_550,h_688,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/YM6NFDR6-YFMZ_original_JPG.jpg">
+                </div>
+                    <h2>Heinz</h2>
+                    
+                </header> -->
+            </section>	
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section class="box">
+										
+										<header>
+											<h3>Look at the Demo!</h3>
+										</header>
+										
+										<footer>
+											<a href="https://www.youtube.com/watch?v=FtFxGPzvim0" class="button alt" target="_blank">Click Here!</a>
+										</footer>
+									</section>
+									<section class="box">
+										<header>
+											<h3>Github Project</h3>
+										</header>
+                                        <footer>
+											<a href="https://github.com/angela-rodriguezz/Cave-Of-Luck" class="button alt" target="_blank">Click Here!</a>
+										</footer>
+										<!--<ul class="divided">
+											<li><a href="#">Sed et blandit consequat sed</a></li>
+											<li><a href="#">Hendrerit tortor vitae sapien dolore</a></li>
+											<li><a href="#">Sapien id suscipit magna sed felis</a></li>
+											<li><a href="#">Aptent taciti sociosqu ad litora</a></li>
+										</ul> 
+										<footer>
+											<a href="#" class="button alt">Ipsum consequat</a>
+										</footer> -->
+										
+									</section>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<article class="box post">
+										<a class="image featured"><img src="./media/game gif.gif" alt="" /></a>
+										<header>
+											<h2>About the Game</h2>
+											<p>A 2D tile-based world exploration engine with Java using a tile renderer and users can explore and interact with objects with an overhead perspective.</p>
+										</header>
+										<p>A procedural world generation game in which you enter an integer as a seed and receive a new combination of rooms and hallways to explore! Each time the
+                                             world is generated, the player gets new orb locations which foretell a lucky combination of lottery numbers that you can play for your town's next
+                                              lottery. Play and gain a higher chance of winning this year's lottery!</p>
+
+                                            <p>Executed the world generation algorithm, UI, main menu interface, saving/loading, and user interactivity game mechanics.</p>
+										
+                                            <h3>Part 1: Room Generation Algorithm</h3>
+										<br>
+                                        <br>
+                                        <br>
+
+                                        <a class="image featured"><img src="/media/roomandhall.png"></img></a>
+										<p>
+											I used Java's <strong>Tileset</strong> and <strong>StdDraw</strong> library to implement the room generation algorithm.</p>
+										<p>
+											In order to generate the output of rooms in the Tile system, I implemented an algorithm similar to Dijkstra's algorithm.
+                                        For instance, first generating random coordinates within the 2D grid interface and then building the the rooms across the
+                                        grid separately at first. Each room is generated in a rectangular shape and pseudo-randomly generated.
+										</p>
+
+                                        After randomly generating rooms based on different seeds the player inserts in the main menu <a href="#hyperlink"> (discussed later here!)</a>, we must
+                                        connect each room together by a hall. Since the locations of the rooms and hallways should be random, each of the hallways
+                                        should be built starting from the random point we generated earlier for the room. From there, we create a path from this
+                                        point to the closest possible room that we generated using a hashmap to record all room point locations on the grid.</p>
+
+                                        <p>Lastly, each hallway and room is bordered by walls. We do this by adding a tile above or below the hall tiles that we have created in the grid previously.</p>
+										
+										<h3>Part 2: Main Menu System</h3>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <a class="image featured"><img src="/media/cavemenu.png"></img></a>
+                                        <p>With this system, we need to first handle the generation of a new game that prompts the user to enter a “random seed” of any
+                                        long value of their choosing. Luckily, the <strong>Core.Engine</strong> system that is integrated within the project contains the
+                                        <strong>interactWithInputString()</strong> and <strong>interactWithKeyboard()</strong> which identifies the user output and what character is outputted from the user.</p>
+                                        <ul>
+                                            <li>Typing N reveals a pop up window to await user input of any number that enables the room generation process.</li>
+                                            <li>Typing L loads your progress in the game of which you had started playing previously.</li>
+                                            <li>Typing I reveals the pop up window for the background and directions of the game.</li>
+                                            <li>Typing E allows you to choose the name of the character that will be moving across the map. This name will appear within the HUD when the game begins.</li>
+                                            <li>Typing Q quits the application.</li>
+                                        </ul>
+
+										<a id="hyperlink"></a>
+                                        <h3>Part 3: Heads-Up Display (HUD) Creation</h3>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <a class="image featured"><img src="/media/hudcave.png"></img></a>
+                                        <p>Now, instead of measuring keyboard input, we must measure mouse hover input. Using the StdDraw library, we have the mouseX and mouseY
+                                        component which examines if the mouse hovers over any area of the map. If the mouse hovers a new area that is not the same component
+                                        as the one previously, the HUD will change the description on the top left corner of the screen to match the new component.</p>
+                                        <p>Furthermore, the score is marked to illustrate if the player has collected any items. If so, the score changes from 0 to the lucky
+                                            number that was generated within the item. Also any name that the user typed within the main menu is always displayed on the top
+                                            right corner of the screen.</p>
+                                        
+                                        <h3>Part 4: Saving & Loading</h3>
+                                        <br>
+                                        <p>In order to regenerate the world after quitting, we must recover the list of moves and keyboard commands the user had used previously.
+                                            We can record these moves within a saved document, registering them until the next load. Therefore, the world is generated the same
+                                            way that it was before quitting.</p>
+									</article>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-12-medium">
+							<section>
+								<header>
+									<h2>Contact Me!</h2>
+								</header>
+								<ul class="social">
+									
+									<li><a class="icon brands fa-dev" href="https://dev.to/angelarodriguezz" target="_blank"><span class="label">DevTo</span></a></li>
+									<li><a class="icon brands fa-github" href="https://github.com/angela-rodriguezz" target="_blank"><span class="label">Github</span></a></li>
+									<li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/angelarodriguezz" target="_blank"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon brands fa-itch-io" href="https://angelarodriguezz.itch.io/" target="_blank"><span class="label">Itch.io</span></a></li>
+									
+								</ul>
+								<ul class="contact">
+									<li>
+										<h3>Address</h3>
+										<p>
+											
+											McAllen, TX
+										</p>
+									</li>
+									<li>
+										<h3>Mail</h3>
+										<p><a href="mailto:Angelamareyrodriguez@gmail.com">angelamareyrodriguez@gmail.com</a></p>
+									</li>
+									<li>
+										<h3>Phone</h3>
+										<p>(619) 518-4541</p>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section>
+								<header>
+									<h2>Other Pages</h2>
+								</header>
+								<ul class="divided">
+									<li><a href="./">Home</a></li>
+									<li><a href="./aboutme">About Me</a></li>
+									<li><a href="./projects">Projects</a></li>
+									<li><a href="./blog">Blog</a></li>
+									<li><a href="./Angela-Rodriguez-Resume.pdf" target="_blank">Resume</a></li>
+									<!--<li><a href="https://www.youtube.com/watch?v=7BeD6RVCMRA" target="_blank">Check out my Film - Inches From COVID</a></li> -->
+									
+								</ul>
+							</section>
+						</div>
+						
+						
+						<div class="col-12">
+
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>&copy; 2023 angela.rodriguezz</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+	</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html>
