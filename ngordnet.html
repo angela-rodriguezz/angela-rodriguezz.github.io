@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NGordNet | Angela Rodriguez Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/png" sizes="500x500" href="./media/favicon.png">
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<section id="header">
+
+				<!-- Logo -->
+				<a href="./"><img class="img fix" width="110" src="./media/favicon.png"></a>
+				<h1>Angela Rodriguez</h1>
+				</br>
+					<p>- Creator in Programming and Visual Arts -</p>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="./">Home</a></li>
+							
+							<li><a href="./aboutme">About Me</a></li>
+							<li class="current"><a href="./projects">Projects</a></li>
+							<li><a href="./blog">Blog</a></li>
+							<li><a href="./Angela-Rodriguez-Resume.pdf" target="_blank">Resume</a></li>
+							
+						</ul>
+					</nav>
+			</section>
+
+			<!-- Main -->
+            <section id="banner2">	
+				<header>
+				<h2>NGordNet</h2>
+					
+				</header>																																																																										
+                <!--<header>
+                <div>
+                    <img height="400" src="https://static.wixstatic.com/media/2f7e13_59acf977762e4afaa7b7109e4c79b553~mv2.jpg/v1/fill/w_550,h_688,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/YM6NFDR6-YFMZ_original_JPG.jpg">
+                </div>
+                    <h2>Heinz</h2>
+                    
+                </header> -->
+            </section>	
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section class="box">
+										
+										<header>
+											<h3>Want to Demo?</h3>
+										</header>
+										
+										<footer>
+											<a href="https://ngordnet.datastructur.es/" class="button alt" target="_blank">Click Here!</a>
+										</footer>
+									</section>
+									<section class="box">
+										<header>
+											<h3>Github Project</h3>
+										</header>
+                                        <footer>
+											<a href="https://github.com/angela-rodriguezz/NGordnet" class="button alt" target="_blank">Click Here!</a>
+										</footer>
+										</section>
+										
+										
+										<!--<ul class="divided">
+											<li><a href="#">Sed et blandit consequat sed</a></li>
+											<li><a href="#">Hendrerit tortor vitae sapien dolore</a></li>
+											<li><a href="#">Sapien id suscipit magna sed felis</a></li>
+											<li><a href="#">Aptent taciti sociosqu ad litora</a></li>
+										</ul> 
+										<footer>
+											<a href="#" class="button alt">Ipsum consequat</a>
+										</footer> -->
+										
+									
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<article class="box post">
+										<a class="image featured"><img src="./media/hyponyms gif.gif" alt="" /></a>
+										<header>
+											<h2>About the Project</h2>
+											<p>A browser based tool for exploring the history of word usage in English texts.
+                                                Provided the backend using Java code for the tool, accepting input and generating appropriate output for display.
+											</p>
+										</header>
+										<p>Collecting the historical frequencies of all observed English ngrams<a href="#definitions"><sup>1</sup></a> from <a href="https://storage.googleapis.com/books/ngrams/books/datasetsv3.html" target="_blank">Google's Ngram dataset</a>, I programmed the backend for a clone of <a href="https://books.google.com/ngrams/graph?content=global+warming%2Cto+the+moon&year_start=1800&year_end=2019&corpus=en-2019&smoothing=0" target="_blank">Google's
+                                            Ngram Viewer</a>, which allows for viewers to visualize the relative popularity of words and phrases. Due to scope, this tool only handles 1gram words 
+                                            and a smaller subset than the full 1gram<a href="#definitions"><sup>2</sup></a> dataset.</p>
+
+										<h3>Data Structures</h3>
+										
+										<p>
+                                            <ul>
+                                                <li><u><strong>TimeSeries:</strong></u> A class with a purpose similar to the TreeMap dataset to match each year with the numerical data point of that year. 
+                                                    Contains methods to collect all years within the time series <strong>years()</strong> as a list and all the data <strong>data()</strong> as a list.</li>
+                                                    <li><u><strong>NGramMap:</strong></u> A class which utilizes the data and organizes it using the TimeSeries we previously contructed. Some methods include 
+                                                        <strong>countHistory()</strong> for returning the yearwise count of the word for all years, <strong>totalCountHistory()</strong> for returning the yearwise count 
+                                                        of all words in all years, <strong>weightHistory()</strong> for the yearwise relative frequency of the word in all time, and <strong>summedWeightHistory()</strong> 
+                                                        that returns the yearwise sum of all relative frequencies in certain words for all time.</li>
+                                                        <li><u><strong>HistoryTextHandler:</strong></u> A class that takes in a data type NGordNetQuery which registers the data collection into the website tool 
+                                                            and returns the history of the word that the user has typed in years and count respectively.</li>
+                                                            <li><u><strong>HistoryHandler:</strong></u> A class that creates a graph visual of the collected data and registers it as a String that contains a base-64 
+                                                                encoded image of the appropriate plot.</li>
+                                            </ul>
+											</p>
+                                            <h3>Incorporating WordNet Dataset</h3>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <a class="image featured"><img src="/media/referencehyp.png"></img></a>
+                                            
+										<p>
+											WordNet groups words into sets of synonyms called synsets and describes the symantic relationships between these words together.
+										</p>
+
+										<p>Each node in the graph is a synset which is all groups of words with the same meaning. Words could belong to multiple synsets and 
+                                            therefore could belong to multiple different lists. In order to handle each of these conditions and incorporate them within our 
+                                            visualizer, we must include more data structures for us to gather these words into their proper hyponym datasets.
+										</p>
+                                        <p>
+                                            <ul>
+                                                <li><u><strong>HyponymsHandler:</strong></u> The implementation for the <em><strong>Hyponyms</strong></em> button in the visualizer. This will require reading different types of 
+                                                    datasets and synthesizing the results with the dataset that we had generated from the previous data structures. For this to work, 
+                                                    we need to implement TimeSeries and NGramMap in order to gain the ability of the <strong>countHistory()</strong> and <strong>totalCountHistory()</strong> of each of 
+                                                    the data. The button should output a string representation of a list of the hyponyms of the single word, including the word itself. 
+                                                    The list should be in alphabetical order, with no repeated words. For instance, in the graph above, the output for "descent" should be 
+                                                    <strong>[descent, jump, parachuting]</strong>. I incorporate the data using text files from <strong>hyponyms.txt</strong> and <strong>synsets.txt</strong>.</li>
+                                                    <li><u><strong>Graph:</strong></u> A class for connecting each synset to the hyponym that aids in outputting into the visualizer. In this class, I incorporate 
+                                                        Depth-First Search (DFS) which continuously adds nodes, edges, and traverses to observe the data. Therefore, it converts the WordNet 
+                                                        dataset files into a graph to find all hyponyms of the word in the given graph.</li>
+                                            </ul>
+                                        </p>
+                                        <a id="definitions"></a>
+										<h3>Definitions</h3>
+										<br>
+										<p>1. Ngram: a sequence of words and phrases ↩
+                                            <br>
+                                            2. 1gram: individual words ↩
+										</p>
+										
+										
+												
+											<!--<p>
+												Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
+												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
+												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+												sit amet nullam consequat feugiat dolore tempus.
+											</p>
+										
+										</section>
+										<section>
+											<header>
+												<h3>So in conclusion ...</h3>
+											</header>
+											<p>
+												Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
+												eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
+												elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+												sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla.
+												Maecenas sagittis convallis justo vel mattis.
+											</p>
+										</section>
+									-->
+									</article>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-12-medium">
+							<section>
+								<header>
+									<h2>Contact Me!</h2>
+								</header>
+								<ul class="social">
+									
+									<li><a class="icon brands fa-dev" href="https://dev.to/angelarodriguezz" target="_blank"><span class="label">DevTo</span></a></li>
+									<li><a class="icon brands fa-github" href="https://github.com/angela-rodriguezz" target="_blank"><span class="label">Github</span></a></li>
+									<li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/angelarodriguezz" target="_blank"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon brands fa-itch-io" href="https://angelarodriguezz.itch.io/" target="_blank"><span class="label">Itch.io</span></a></li>
+									
+								</ul>
+								<ul class="contact">
+									<li>
+										<h3>Address</h3>
+										<p>
+											
+											McAllen, TX
+										</p>
+									</li>
+									<li>
+										<h3>Mail</h3>
+										<p><a href="mailto:Angelamareyrodriguez@gmail.com">angelamareyrodriguez@gmail.com</a></p>
+									</li>
+									<li>
+										<h3>Phone</h3>
+										<p>(619) 518-4541</p>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section>
+								<header>
+									<h2>Other Pages</h2>
+								</header>
+								<ul class="divided">
+									<li><a href="./">Home</a></li>
+									<li><a href="./aboutme">About Me</a></li>
+									<li><a href="./projects">Projects</a></li>
+									<li><a href="./blog">Blog</a></li>
+									<li><a href="./Angela-Rodriguez-Resume.pdf" target="_blank">Resume</a></li>
+									<!--<li><a href="https://www.youtube.com/watch?v=7BeD6RVCMRA" target="_blank">Check out my Film - Inches From COVID</a></li> -->
+									
+								</ul>
+							</section>
+						</div>
+						
+						
+						<div class="col-12">
+
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>&copy; 2023 angela.rodriguezz</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+	</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html>
